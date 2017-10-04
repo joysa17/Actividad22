@@ -1,28 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Students</h1>
-
-
+<div class ="table-resposive">
+<table class ="table-striped"> 
+<thead>
   <div>
     <td>
       <th>Name</th>
       <th>Age</th>
     </td>
   </div>
+</thead>
 
-  
+  <tbody> 
     <% @students.each do |student| %>
-    <div class="well" col-md-9> 
-        <%= student.name %>
-        <%= student.age %>           
+    <tr>
+        <td><%= student.name %></td>
+        <td><%= student.age %></td> 
+        <td><%= student.email %></td>           
         
-        <%= link_to 'Show', student, class:'btn btn-primary' %>
-        <%= link_to 'Edit', edit_student_path(student), class:'btn btn-success' %>
-        <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-danger' %>
-      
+        <td><%= link_to 'Show', student, class:'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_student_path(student), class:'btn btn-success' %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-danger' %></td>
+      </tr>
     <% end %>
-  </div>
-
+   </tbody>
+  </table>
+</div>
 
 <br>
 
