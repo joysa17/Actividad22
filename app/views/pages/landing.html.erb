@@ -1,0 +1,20 @@
+ 
+<div class ="table-resposive">
+  <table class ="table table-striped"> 
+    <tr>
+    	<td>Name</td>
+    	<td>Age</td>
+    	<td>Email</td>
+    </tr>
+     
+    <tr>
+       <% @students.each do |a| %>
+    	<td><%= a.name %></td> 
+    	<td><%= a.age %></td> 
+    	<td><%= a.email %></td> 
+    	
+    </tr>
+    <% end %>
+  </table>
+</div>
+ 

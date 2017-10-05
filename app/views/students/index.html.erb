@@ -1,28 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Students</h1>
-<div class ="table-resposive">
-<table class ="table-striped"> 
-<thead>
-  <div>
-    <td>
-      <th>Name</th>
-      <th>Age</th>
-    </td>
-  </div>
-</thead>
-
-  <tbody> 
-    <% @students.each do |student| %>
-    <tr>
-        <td><%= student.name %></td>
-        <td><%= student.age %></td> 
-        <td><%= student.email %></td>           
-        
-        <td><%= link_to 'Show', student, class:'btn btn-primary' %></td>
-        <td><%= link_to 'Edit', edit_student_path(student), class:'btn btn-success' %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-danger' %></td>
-      </tr>
+<div class ="table-responsive">
+  <table class ="table table-striped"> 
+    <thead>
+        <tr>
+          <td>Name</td>
+          <td>Age</td>
+          <td>Email</td>
+        </tr>
+    </thead>
+   <tbody> 
+      <% @students.each do |student| %>
+      <tr>
+          <td><%= student.name %></td>
+          <td><%= student.age %></td> 
+          <td><%= student.email %></td>           
+          
+          <td><%= link_to 'Show', student, class:'btn btn-primary' %></td>
+          <td><%= link_to 'Edit', edit_student_path(student), class:'btn btn-success' %></td>
+          <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-danger' %></td>
+        </tr>
     <% end %>
    </tbody>
   </table>
